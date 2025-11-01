@@ -66,7 +66,7 @@ function App() {
   // Render movie card
   const renderMovieCard = (movie) => {
     const posterUrl = movie.poster_path ? `${IMAGE_BASE_URL}${movie.poster_path}` : '';
-    const releaseDate = movie.release_date ? new Date(movie.release_date).getFullYear() : 'Unknown';
+    const releaseDate = movie.release_date || 'Unknown';
     const rating = movie.vote_average ? movie.vote_average.toFixed(1) : 'N/A';
 
     return (
@@ -74,7 +74,7 @@ function App() {
         <img src={posterUrl} alt={movie.title} className="movie-poster" />
         <div className="movie-info">
           <h3 className="movie-title">{movie.title}</h3>
-          <p className="movie-release">Release: {releaseDate}</p>
+          <p className="movie-release">Release Date: {releaseDate}</p>
           <p className="movie-rating">Rating: {rating}/10</p>
         </div>
       </div>
