@@ -15,7 +15,6 @@ body {
     padding: 20px;
 }
 
-/* header */
 header {
     text-align: center;
     margin-top: -50px;
@@ -97,6 +96,7 @@ header::after {
 
 .movie-info {
     padding: 15px;
+    text-align: center;
 }
 
 .movie-title {
@@ -109,7 +109,7 @@ header::after {
 .movie-release,
 .movie-rating {
     font-size: 0.9rem;
-    color: #666;
+    color: #000;
     margin-bottom: 4px;
 }
 
